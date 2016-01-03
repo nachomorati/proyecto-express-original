@@ -7,6 +7,7 @@ var session = require('express-session');
 // Creo la instancia de express
 var app = express();
 
+
 // Le indico que maneje sesiones por cookies
 app.use(session({
     resave: false,

@@ -10,9 +10,17 @@
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-card__supporting-text " for="{{id}}">
             <input type="checkbox" id="{{id}}" class="mdl-checkbox__input" {{#if completada}}checked{{/if}} />
             <span class="mdl-checkbox__label">{{titulo}}</span>
+            <button id="{{id}}" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab btnBorrar">
+              <i class="material-icons">clear</i>
+            </button>
         </label>
     </div>
     {{/each}}
+    {{^tareas}}
+      <div class="noTasks">
+        <h2>No hay tareas</h2>
+      </div>
+    {{/tareas}}
     <div class="mdl-card__actions mdl-grid">
         <div class="mdl-cell mdl-cell--5-col">
             <span class="pending-task-count">{{ pendientes }}</span> tareas pendientes

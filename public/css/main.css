@@ -60,6 +60,19 @@
     width: 100%;
 }
 
+.task-list .btnBorrar {
+  float: right;
+  height: 0.9em;
+}
+
+.task-list .noTasks {
+  width: 100%;
+}
+
+.task-list .noTasks h2 {
+  width: 80%;
+  margin: 0 auto;
+}
 
 /* Animacion para cuando completan una tarea */
 .task-item .mdl-checkbox__label {

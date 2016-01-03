@@ -110,7 +110,13 @@ modulo.get('/pendientes', [
 // Ruta para crear una tarea
 modulo.post('/crear', function (req, res) {
     Tarea.crear(obtenerUsuarioId(req), req.body.titulo);
-    res.redirect('/');
+    res.redirect('/pendientes');
+});
+
+// Ruta para borrar una tarea
+modulo.post('/:id/borrar', function (req, res) {
+  var tarea = Tarea.buscarUno(obtenerUsuarioId(req), req.params.id);
+  tarea.borrar();
 });
 
 // Middleware para obtener una tarea desde su id
